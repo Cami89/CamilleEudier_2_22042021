@@ -1,0 +1,50 @@
+@font-face 
+{
+    font-family: "Raleway" ; src: url("polices/static/Raleway-Medium.ttf");
+}
+
+header
+{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 0.7em ;
+}
+
+.topheader
+{
+    display: flex;
+    justify-content: space-between; /*éléments étirés: logo tout en haut à gauche et nav tout en haut à droite*/
+}
+
+#logo
+{
+    width: 8em ;
+    height: 100%;
+
+}
+
+ul[class=navmenu] 
+{
+    list-style: none; /*puces retirées*/
+    display: flex ;
+    
+}
+
+li[class=navmenu] 
+{
+    padding: 1em ; /*marge intérieure*/
+}
+
+h1
+{
+    font-size: 1.4em;
+}
+
+.fas.fa-map-marker-alt
+{
+    text-align:center;
+    background-color: #f2f2f2;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}

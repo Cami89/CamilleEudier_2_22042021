@@ -1,0 +1,30 @@
+@font-face
+{
+    font-family: "Raleway" ; src: url("polices/static/Raleway-Medium.ttf");
+}
+
+section
+{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 0.7em ;
+}
+
+.hotelspics
+{
+    width: 10%;
+}
+
+.pophotelspics
+{
+    width: 10%;
+}
+
+.activitiespics
+{
+    width: 10%;
+}
+
+h2
+{
+    font-size: 1.4em;
+}

@@ -11,32 +11,54 @@
     <script src="https://kit.fontawesome.com/a89bd7c440.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <header>
+
+        <!-- Logo login et nav pour écrans sup à 480px-->
         <div class="topheader">
         <img src="images\logo\Reservia@3x.png" alt="logo" id="logo">
             <nav>
                 <ul class="navmenu">
                     <li class="navmenu">Hébergements</li>
                     <li class="navmenu">Activités</li>
-                    <li class="navmenu">S'inscrire</li>
+                    <li class="navmenu" id="login"><a href="pagedinscription.html" id="login">S'inscrire</a></li>
+                </ul>
+            </nav>
+        </div>  
+
+        <!-- Logo login et nav pour écrans de max 480px-->
+        <div class="smarttopheader">  
+            <div class="smarttopheaderfirstline">
+                <img src="images\logo\Reservia@3x.png" alt="logo" id="logo">           
+                <a href="pagedinscription.html" id="login">S'inscrire</a>
+            </div>
+            <nav>
+                <ul class="smartnavmenu">
+                    <li class="smartnavmenu">Hébergements</li>
+                    <li class="smartnavmenu">Activités</li>
                 </ul>
             </nav>
         </div>
-            <h1>Trouvez votre <strong>hébergement</strong> pour des </strong>vacances de rêve</strong></h1>
+
+        <h1>Trouvez votre <strong>hébergement</strong> pour des </strong>vacances de rêve</strong></h1>
             <p>En plein centre ville ou en pleine nature</p>
-        <div id="searchbar">
-            <i class="fas fa-map-marker-alt"></i>
-            Marseille, France 
-            Rechercher
-        </div>
+
+        <!--Barre de recherche-->
+        <form method="post" action="traitement.php"> 
+            <p>
+                <label for="ville"><i class="fas fa-map-marker-alt"></i></label><input type="text" name="ville" id="ville" value="Marseille, France"><input type="submit" value="Rechercher" class="searchbutton">
+            </p>
+        </form></br>  
         <div id="filters">
             <p>Filtres
-                <i class="fas fa-money-bill-wave"></i>Economique
-                <i class="fas fa-child"></i>Familial
-                <i class="fas fa-heart"></i>Romantique
-                <i class="fas fa-dog"></i>Animaux autorisés
+                <i class="fas fa-money-bill-wave"></i><span class="filtersname">Economique</span>
+                <i class="fas fa-child"></i><span class="filtersname">Familial</span>
+                <i class="fas fa-heart"></i><span class="filtersname">Romantique</span>
+                <i class="fas fa-dog"></i><span class="filtersname">Animaux autorisés</span>
+                </label>        
             </p>
-            <p><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+            <p class="nombrehebergement">
+                <span><i class="fas fa-info"></i></span>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
     </header>
 
@@ -94,7 +116,7 @@
             <h4>Fort de Pomègues</h4>
             <img src="images\activites\3_medium\ilesdufrioul.jpg" alt="Iles du Frioul" class="activitiespics">                
             <h4>Iles du Frioul</h4>
-            <img src="images\activites\3_medium\parcnationaldescalanques.jpg" alt="Parc National des Calanques" class="activitiespics">                
+            <img src="images\activites\3_medium\parcnationaldescalanques.jpg" alt="Parc National des Calagnques" class="activitiespics">                
             <h4>Parc National des Calanques</h4>
             <img src="images\activites\3_medium\notredamedelagarde.jpg" alt="Notre-Dame-de-la-Garde" class="activitiespics">                
             <h4>Notre-Dame-de-la-Garde</h4>
@@ -126,5 +148,6 @@
             </ul>
         </div>
     </footer>
+    
 </body>
 </html>

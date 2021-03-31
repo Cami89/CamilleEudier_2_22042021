@@ -3,48 +3,186 @@
     font-family: "Raleway" ; src: url("polices/static/Raleway-Medium.ttf");
 }
 
+body
+{
+    width: auto;
+    margin: 5%;
+}
+
 header
 {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 0.7em ;
 }
 
-.topheader
-{
-    display: flex;
-    justify-content: space-between; /*éléments étirés: logo tout en haut à gauche et nav tout en haut à droite*/
-}
-
 #logo
 {
-    width: 8em ;
+    width: 7em ;
     height: 100%;
 
 }
 
+#login
+{
+    color: #0065FC;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+/*Paramètres pour écrans supérieurs à 480px*/
+.topheader
+{
+    display: flex;
+    justify-content: space-between; /*éléments étirés: logo tout en haut à gauche et nav tout en haut à droite*/
+    width: 100%;
+    align-items: center; /*nav même hauteur que logo*/
+}
 ul[class=navmenu] 
 {
     list-style: none; /*puces retirées*/
     display: flex ;
-    
 }
-
 li[class=navmenu] 
 {
     padding: 1em ; /*marge intérieure*/
 }
+
+
+/*Paramètres pour smartphones*/
+.smarttopheaderfirstline 
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; /*login même hauteur que logo*/
+}
+ul[class=smartnavmenu] 
+{
+    list-style: none; /*puces retirées*/
+    padding-left:0em ; /*tabulation liste retirée*/
+    display: flex ;
+    justify-content: space-between;
+}
+li[class=smartnavmenu] 
+{
+    padding: 1em ; /*marge intérieure*/
+    border-bottom: 0.2em #f2f2f2 solid;
+    flex-grow: 1 ;
+    flex-grow: 2;
+    text-align: center ;
+}
+li[class=smartnavmenu]:hover /*dynamique au clic*/
+{
+    padding: 1em ; /*marge intérieure*/
+    border-bottom: 0.2em #0065FC solid;
+    color: #0065FC;
+}
+
 
 h1
 {
     font-size: 1.4em;
 }
 
+
+/*barre de recherche*/
 .fas.fa-map-marker-alt
 {
     text-align:center;
     background-color: #f2f2f2;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding: 1.01em;
+    border-top-left-radius: 0.7em;
+    border-bottom-left-radius: 0.7em;
+    font-size: 1.09em ;  
+}
+#ville
+{
+    border: #f2f2f2 solid 0.01em;
+    padding: 1em;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 1em ;
+    font-weight: bold;
+}
+.searchbutton
+{
+    padding: 1em;
+    background-color: #0065FC;
+    border:#0065FC solid 0.01em;
+    color: white;
+    border-top-right-radius: 0.7em;
+    border-bottom-right-radius: 0.7em;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 1em ;
+}
+
+
+/*Filtres*/
+.fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog
+{
+    color: #0065FC;
+    padding: 1em;
+    background-color:#DEEBFF; 
+    border-radius: 2em;
+}
+.filtersname
+{
+    border-top: #f2f2f2 solid 0.2em;
+    border-right: #f2f2f2 solid 0.2em;
+    border-bottom: #f2f2f2 solid 0.2em;
+    padding: 0.7em;
+    border-radius: 0em 2em 2em 0em;
+    font-weight: bold;
+}
+
+/*phrase info sur le nombre d'hébergements*/
+.nombrehebergement
+{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fas.fa-info
+{
+    color:#0065FC;
+    border-radius: 10em;
+    border-color:#f2f2f2;
+    background-color: white;
+    border-style:solid;
+    border-width: 0.1em;
+    padding-top:0.4em ;
+    padding-left: 0.7em;
+    padding-bottom:0.4em ;
+    padding-right: 0.7em;
+    margin-right: 0.7em;
+}
+
+
+
+/*responsive design pour smartphone*/
+@media screen and (max-device-width:480px) 
+{
+    .conteneur
+    {
+        width: auto;
+    }
+
+    .topheader
+    {
+        display: none;
+    }
+
+}
+
+/*Responsive autres*/
+@media screen and (min-device-width:480px) 
+{
+ 
+
+    .smarttopheader /*header type smartphone caché lorsqu'écran sup à 480px*/
+    {
+        display: none;
+    }
+
 }

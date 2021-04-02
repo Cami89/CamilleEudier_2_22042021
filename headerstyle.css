@@ -5,8 +5,13 @@
 
 body
 {
-    width: auto;
-    margin: 5%;
+    width :100% ;
+}
+
+#global
+{
+    width:90% ;
+    margin:auto ;
 }
 
 header
@@ -19,7 +24,6 @@ header
 {
     width: 7em ;
     height: 100%;
-
 }
 
 #login
@@ -27,57 +31,31 @@ header
     color: #0065FC;
     font-weight: bold;
     text-decoration: none;
-
+    position: absolute;
+    right: 4.5%;
+    top:4%;
 }
 
 
-/*Paramètres pour écrans supérieurs à 480px*/
-.topheader
-{
-    display: flex;
-    justify-content: space-between; /*éléments étirés: logo tout en haut à gauche et nav tout en haut à droite*/
-    width: 100%;
-    align-items: center; /*nav même hauteur que logo*/
-}
+/*Paramètres nav */
 ul[class=navmenu] 
-{
-    list-style: none; /*puces retirées*/
-    display: flex ;
-}
-li[class=navmenu] 
-{
-    padding: 1em ; /*marge intérieure*/
-}
-
-
-/*Paramètres pour smartphones*/
-.smarttopheaderfirstline 
-{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center; /*login même hauteur que logo*/
-}
-ul[class=smartnavmenu] 
 {
     list-style: none; /*puces retirées*/
     padding-left:0em ; /*tabulation liste retirée*/
     display: flex ;
     justify-content: space-between;
 }
-li[class=smartnavmenu] 
+li[class=navmenu] 
 {
     padding: 1em ; /*marge intérieure*/
     border-bottom: 0.2em #f2f2f2 solid;
-    flex-grow: 1 ;
-    flex-grow: 2;
     text-align: center ;
+    width: 50%;
 }
-li[class=smartnavmenu]:hover /*dynamique au clic*/
+li[class=navmenu]:hover /*dynamique au clic*/
 {
     padding: 1em ; /*marge intérieure*/
     border-bottom: 0.2em #0065FC solid;
-    color: #0065FC;
 }
 
 
@@ -93,17 +71,25 @@ h1
     text-align:center;
     background-color: #f2f2f2;
     padding: 1.01em;
+    width: 1.01em ;
     border-top-left-radius: 0.7em;
     border-bottom-left-radius: 0.7em;
-    font-size: 1.09em ;  
+    font-size: 1.089em ;  
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
 }
-#ville
+#cityfinder
 {
     border: #f2f2f2 solid 0.01em;
     padding: 1em;
+
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 1em ;
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .searchbutton
 {
@@ -115,16 +101,37 @@ h1
     border-bottom-right-radius: 0.7em;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 1em ;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.smartsearchbutton
+{
+    font-family: FontAwesome;
+    border-radius: 0.7em;
+    padding: 1em;
+    background-color: #0065FC;
+    border:#0065FC solid 0.01em;
+    color: white;
+    font-size: 1em;
+    margin-left: -1em;
+    justify-content: flex-start;
 }
 
 
 /*Filtres*/
+.filterstitle
+{
+    font-weight: bold;
+}
 .fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog
 {
     color: #0065FC;
     padding: 1em;
     background-color:#DEEBFF; 
     border-radius: 2em;
+    margin-right: -1.5em;
+    
 }
 .filtersname
 {
@@ -134,7 +141,10 @@ h1
     padding: 0.7em;
     border-radius: 0em 2em 2em 0em;
     font-weight: bold;
+    padding-left: 3em;
+    border-width: 0.14em;
 }
+
 
 /*phrase info sur le nombre d'hébergements*/
 .nombrehebergement
@@ -163,14 +173,15 @@ h1
 /*responsive design pour smartphone*/
 @media screen and (max-device-width:480px) 
 {
-    .conteneur
-    {
-        width: auto;
-    }
 
-    .topheader
+    .searchbutton
     {
-        display: none;
+    display: none;
+    }
+    .filterstitle
+    { 
+        display:block;
+        margin-bottom: 1em; 
     }
 
 }
@@ -178,11 +189,49 @@ h1
 /*Responsive autres*/
 @media screen and (min-device-width:480px) 
 {
- 
+    .topheader
+    {
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        vertical-align: middle;
+    }
+    .navandlogin
+    {
+        display:flex
+    }
+    ul[class=navmenu]
+    {
+        width:30%;
 
-    .smarttopheader /*header type smartphone caché lorsqu'écran sup à 480px*/
+    }
+    li[class=navmenu]
+    {
+        border-bottom: none;
+        padding-top: 2em;
+        padding-right: 5em;
+        padding-bottom: 2em;
+        padding-left: 5em;
+    }
+    li[class=navmenu]:hover
+    {
+        border-top: 0.2em #0065FC solid;
+        border-bottom: none;
+        padding-top: 2em;
+        padding-right: 5em;
+        padding-bottom: 2em;
+        padding-left: 5em;
+        color: #0065FC;
+    }
+    #login
+    {
+        position:relative;
+        margin-top:3em;
+   
+    }
+
+    .smartsearchbutton
     {
         display: none;
     }
-
 }

@@ -66,30 +66,28 @@ h1
 
 
 /*barre de recherche*/
+.searchbar
+{
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+}
 .fas.fa-map-marker-alt
 {
     text-align:center;
     background-color: #f2f2f2;
-    padding: 1.01em;
-    width: 1.01em ;
+    padding: 1.02em;
     border-top-left-radius: 0.7em;
     border-bottom-left-radius: 0.7em;
     font-size: 1.089em ;  
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 #cityfinder
 {
     border: #f2f2f2 solid 0.01em;
     padding: 1em;
-
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 1em ;
     font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 .searchbutton
 {
@@ -101,9 +99,6 @@ h1
     border-bottom-right-radius: 0.7em;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 1em ;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 .smartsearchbutton
 {
@@ -115,35 +110,63 @@ h1
     color: white;
     font-size: 1em;
     margin-left: -1em;
-    justify-content: flex-start;
 }
 
 
 /*Filtres*/
+#filters
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
 .filterstitle
 {
     font-weight: bold;
+    margin-right: 1.5em;
 }
+.ecofilter, .famfilter, .anifilter, .romfilter
+{
+    display:inline-block;
+    flex-wrap: nowrap;
+    margin-top:0.5em;
+    margin-right:0.5em;
+}
+
 .fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog
 {
     color: #0065FC;
-    padding: 1em;
     background-color:#DEEBFF; 
+    padding: 1em;
     border-radius: 2em;
-    margin-right: -1.5em;
-    
+    margin-right: -1.3em;
+    position:relative;
+    z-index: 2;
+}
+.fas.fa-money-bill-wave
+{
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+}
+.fas.fa-child
+{
+    padding-left: 1.19em;
+    padding-right: 1.19em;
 }
 .filtersname
 {
     border-top: #f2f2f2 solid 0.2em;
     border-right: #f2f2f2 solid 0.2em;
     border-bottom: #f2f2f2 solid 0.2em;
-    padding: 0.7em;
+    padding: 0.72em;
     border-radius: 0em 2em 2em 0em;
     font-weight: bold;
-    padding-left: 3em;
-    border-width: 0.14em;
+    padding-left: 2em;
+    border-width: 0.2em;
+    position:relative;
+    z-index: 1;
 }
+
 
 
 /*phrase info sur le nombre d'hébergements*/
@@ -173,10 +196,9 @@ h1
 /*responsive design pour smartphone*/
 @media screen and (max-device-width:480px) 
 {
-
     .searchbutton
     {
-    display: none;
+        display: none;
     }
     .filterstitle
     { 
@@ -186,8 +208,26 @@ h1
 
 }
 
-/*Responsive autres*/
+/*Responsive design pour tablettes*/
 @media screen and (min-device-width:480px) 
+{
+    .smartsearchbutton
+    {
+        display: none;
+    }
+    .fas.fa-map-marker-alt
+    {
+        font-size: 1.09em ;  
+    }
+    .filterstitle
+    { 
+        display:block;
+        margin-bottom: 1em; 
+    }
+}
+
+/*Responsive desktop*/
+@media screen and (min-device-width:768px) 
 {
     .topheader
     {
@@ -200,38 +240,46 @@ h1
     {
         display:flex
     }
-    ul[class=navmenu]
-    {
-        width:30%;
-
-    }
     li[class=navmenu]
     {
+        display:inline-block;
         border-bottom: none;
         padding-top: 2em;
-        padding-right: 5em;
+        padding-right: 2em;
         padding-bottom: 2em;
-        padding-left: 5em;
+        padding-left: 2em;
+        text-align:center;
+        width: 50%;
     }
     li[class=navmenu]:hover
     {
+        display:inline-block;
         border-top: 0.2em #0065FC solid;
         border-bottom: none;
         padding-top: 2em;
-        padding-right: 5em;
+        padding-right: 2em;
         padding-bottom: 2em;
-        padding-left: 5em;
+        padding-left: 2em;
         color: #0065FC;
+        text-align: center;
+        width: 50%;
     }
     #login
     {
         position:relative;
         margin-top:3em;
-   
+        padding-left: 3em;
     }
-
+   
     .smartsearchbutton
     {
         display: none;
     }
+    .fas.fa-map-marker-alt
+    {
+        font-size: 1.1em ;  
+        padding-top: 0.97em;
+        padding-bottom: 1em;
+    }
+
 }

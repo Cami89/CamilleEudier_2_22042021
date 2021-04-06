@@ -6,24 +6,21 @@
 body
 {
     width :100% ;
+    margin-left: 0%;
 }
 
-#global
-{
-    width:90% ;
-    margin:auto ;
-}
 
 header
 {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
-    font-size: 0.7em ;
+    font-size: 0.8em ;
 }
 
 #logo
 {
     width: 7em ;
     height: 100%;
+    margin-left: 5%;
 }
 
 #login
@@ -32,8 +29,8 @@ header
     font-weight: bold;
     text-decoration: none;
     position: absolute;
-    right: 4.5%;
-    top:4%;
+    right: 2.5em;
+    top:2em;
 }
 
 
@@ -58,10 +55,16 @@ li[class=navmenu]:hover /*dynamique au clic*/
     border-bottom: 0.2em #0065FC solid;
 }
 
+.lowheader
+{
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
 
 h1
 {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 
@@ -97,7 +100,6 @@ h1
     color: white;
     border-top-right-radius: 0.7em;
     border-bottom-right-radius: 0.7em;
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 1em ;
 }
 .smartsearchbutton
@@ -145,13 +147,14 @@ h1
 }
 .fas.fa-money-bill-wave
 {
-    padding-left: 0.9em;
-    padding-right: 0.9em;
+    padding-left: 0.84em;
+    padding-right: 0.84em;
+    padding-bottom:0.97em;
 }
 .fas.fa-child
 {
-    padding-left: 1.19em;
-    padding-right: 1.19em;
+    padding-left: 1.17em;
+    padding-right: 1.17em;
 }
 .filtersname
 {
@@ -210,7 +213,11 @@ h1
 
 /*Responsive design pour tablettes*/
 @media screen and (min-device-width:480px) 
-{
+{   
+    .lowheader
+    {
+        padding:5%;
+    }
     .smartsearchbutton
     {
         display: none;
@@ -229,6 +236,23 @@ h1
 /*Responsive desktop*/
 @media screen and (min-device-width:768px) 
 {
+    body 
+    {
+        margin:2%
+    }
+
+    #logo
+    {
+        width: 6em;
+        margin-left: 0%;
+    }
+    #login
+    {
+        position:absolute;
+        right: 6em;
+        margin-left: 5em;
+        top:0em;
+    }
     .topheader
     {
         display:flex;
@@ -269,6 +293,12 @@ h1
         position:relative;
         margin-top:3em;
         padding-left: 3em;
+        margin-right: 0em;
+    }
+
+    .lowheader
+    {
+        padding:0%
     }
    
     .smartsearchbutton
@@ -280,6 +310,11 @@ h1
         font-size: 1.1em ;  
         padding-top: 0.97em;
         padding-bottom: 1em;
+    }
+
+    .filterstitle
+    {
+        display: inline-block;
     }
 
 }

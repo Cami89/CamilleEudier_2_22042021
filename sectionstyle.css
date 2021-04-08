@@ -48,7 +48,7 @@ article
     border-radius: 2em 2em 0em 0em;
     z-index:1;
 }
-h4[class="hoteltitle"]
+h4[class="hotelname"]
 {
     margin-bottom: -0.5em;
     margin-top: 0.5em;
@@ -198,8 +198,33 @@ aside
         width: 62%;
         background-color: #f2f2f2;
         margin-right: 2em;
-        border-radius: 2em;
+        border-radius: 1em;
         padding:2%;
+        
+    }
+
+    .hotelspics
+    {
+        width: 22em
+        
+    }
+    .hotelsdesc
+    {
+        width: 20.8em;
+    }
+    .allhotels
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        
+    }
+
+    .hotelspicsanddesc
+    {
+        margin: 0em 0em 2em 0em;
+        width: 20em;
     }
 
     aside

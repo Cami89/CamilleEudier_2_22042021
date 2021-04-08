@@ -8,6 +8,10 @@ section
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 0.8em ;
 }
+section[id="section1"]
+    {
+        display:flex;
+    }
 
 /*Couleurs des étoiles*/
 .fas.fa-star[id="blue"]
@@ -21,11 +25,55 @@ section
 
 
 /*Bloc hébergements*/
+article
+{
+    padding:4%;
+}
+.hotelspicsanddesc
+{
+    display:flex;
+    flex-direction: column;
+    width: 97%;
+    height: 15em;
+}
+
 .hotelspics
 {
-    width: 10em;
-    height: 10em;
+    position:relative;
+    overflow:hidden;
+    width: 97%;
+    height: 100%;
+    border: solid 0.4em white;
+    box-shadow: 0em 0em 0.4em lightgray;
+    border-radius: 2em 2em 0em 0em;
+    z-index:1;
 }
+h4[class="hoteltitle"]
+{
+    margin-bottom: -0.5em;
+    margin-top: 0.5em;
+}
+.hotelsdesc
+{
+    background-color:white;
+    margin-top: -1em;
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+    width: 92.2%;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    box-shadow: 0em 0em 0.4em lightgray;
+    z-index: 2;
+}
+.hotelsprices
+{
+    margin-bottom: 0.5em;
+}
+.morehotels
+{
+    font-weight: bold;
+}
+
 
 /*Bloc les plus populaires*/
 aside
@@ -123,7 +171,6 @@ aside
 {
     section[id="section1"]
     {
-        display:flex;
         flex-wrap: wrap;
     }
     aside
@@ -145,6 +192,21 @@ aside
 
 /*Responsive desktop*/
 @media screen and (min-device-width:768px) 
-{
-   
+{   
+    article
+    {
+        width: 62%;
+        background-color: #f2f2f2;
+        margin-right: 2em;
+        border-radius: 2em;
+        padding:2%;
+    }
+
+    aside
+    {
+        text-align: justify;
+        width: 25%;
+        padding: 2em;
+        border-radius: 1em;
+    }
 }

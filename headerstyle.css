@@ -5,15 +5,9 @@
 
 body
 {
-    width :100% ;
-    margin-left: 0%;
-}
-
-
-header
-{
     font-family: "Raleway", Arial, Helvetica, sans-serif;
-    font-size: 0.8em ;
+    font-size: 0.9em ;
+    margin:0%
 }
 
 #logo
@@ -21,6 +15,7 @@ header
     width: 7em ;
     height: 100%;
     margin-left: 5%;
+    margin-top: 2.5%
 }
 
 #login
@@ -69,27 +64,32 @@ h1
 
 
 /*barre de recherche*/
+
 .searchbar
 {
     display:flex;
     justify-content: flex-start;
     align-items:center;
+    font-size: 1em;
+    width: 100%;
+    height: 3.1em;
+    overflow:hidden;
+    border-radius: 0.7em;
 }
 .fas.fa-map-marker-alt
 {
-    text-align:center;
+    padding: 1em;
     background-color: #f2f2f2;
-    padding: 1.1em;
+    border:#f2f2f2 solid 0.01em;
     border-top-left-radius: 0.7em;
     border-bottom-left-radius: 0.7em;
-    font-size: 1.1em ;  
+    
 }
 #cityfinder
 {
     border: #f2f2f2 solid 0.01em;
     padding: 1em;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
-    font-size: 1em ;
     font-weight: bold;
 }
 .searchbutton
@@ -100,7 +100,6 @@ h1
     color: white;
     border-top-right-radius: 0.7em;
     border-bottom-right-radius: 0.7em;
-    font-size: 1em ;
 }
 .smartsearchbutton
 {
@@ -110,7 +109,6 @@ h1
     background-color: #0065FC;
     border:#0065FC solid 0.01em;
     color: white;
-    font-size: 1em;
     margin-left: -1em;
 }
 
@@ -126,6 +124,10 @@ h1
 {
     font-weight: bold;
     margin-right: 1.5em;
+}
+.filtersbutton
+{
+    margin-top: 0em;
 }
 .ecofilter, .famfilter, .anifilter, .romfilter
 {
@@ -161,10 +163,9 @@ h1
     border-top: #f2f2f2 solid 0.2em;
     border-right: #f2f2f2 solid 0.2em;
     border-bottom: #f2f2f2 solid 0.2em;
-    padding: 0.72em;
+    padding: 0.72em 1em 0.72em 2em;
     border-radius: 0em 2em 2em 0em;
     font-weight: bold;
-    padding-left: 2em;
     border-width: 0.2em;
     position:relative;
     z-index: 1;
@@ -222,9 +223,13 @@ h1
     {
         display: none;
     }
+    .searchbar
+    {   
+    height: 3.07em;
+    }
     .fas.fa-map-marker-alt
     {
-        font-size: 1.09em ;  
+        font-size: 1em ;
     }
     .filterstitle
     { 
@@ -234,7 +239,7 @@ h1
 }
 
 /*Responsive desktop*/
-@media screen and (min-device-width:768px) 
+@media screen and (min-device-width:1150px) 
 {
     body 
     {
@@ -300,16 +305,10 @@ h1
     {
         padding:0%
     }
-   
+
     .smartsearchbutton
     {
         display: none;
-    }
-    .fas.fa-map-marker-alt
-    {
-        font-size: 1.1em ;  
-        padding-top: 0.97em;
-        padding-bottom: 1em;
     }
 
     .filterstitle

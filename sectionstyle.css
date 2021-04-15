@@ -1,50 +1,52 @@
-@font-face
-{
-    font-family: "Raleway" ; src: url("polices/static/Raleway-Medium.ttf");
-}
 
-section
-{
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
-    font-size: 0.8em ;
-}
 section[id="section1"]
-    {
-        display:flex;
-    }
+{
+    display:flex;
+}
 
 /*Couleurs des étoiles*/
-.fas.fa-star[id="blue"]
+.fas.fa-star.blue
 {
     color:#0065FC;
 }
-.fas.fa-star[id="grey"]
+.fas.fa-star.grey
 {
     color:#f2f2f2;
 }
 
+.stars
+{
+    display:inline-flex;
+    justify-content: flex-start;
+}
 
 /*Bloc hébergements*/
 article
 {
     padding:4%;
 }
+.hoteltitle
+{
+    padding-bottom: 1%;
+}
 .hotelspicsanddesc
 {
     display:flex;
     flex-direction: column;
-    width: 97%;
+    width: 96.6%;
     height: 15em;
+    box-shadow: 0em 0em 0.4em lightgray;
+    border-radius: 2em;
+    border: solid 0.4em white;
 }
 
 .hotelspics
 {
     position: relative;
     overflow: hidden;
-    width: 97%;
+    object-fit: cover;
+    width: 100%;
     height: 100%;
-    border: solid 0.4em white;
-    box-shadow: 0em 0em 0.4em lightgray;
     border-radius: 2em 2em 0em 0em;
     z-index:1;
 }
@@ -56,13 +58,12 @@ h4[class="hotelname"]
 .hotelsdesc
 {
     background-color:white;
-    margin-top: -1em;
-    padding-left: 2em;
-    padding-bottom: 0.5em;
-    width: 92.2%;
+    margin-top: -2em;
+    padding-left: 1.2em;
+    padding-bottom: 0.8em;
+    width: 96.5%;
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
-    box-shadow: 0em 0em 0.4em lightgray;
     z-index: 2;
 }
 .hotelsprices
@@ -78,94 +79,89 @@ h4[class="hotelname"]
 /*Bloc les plus populaires*/
 aside
 {
-    width: 92%;
     background-color: #f2f2f2;
-    padding: 4%;
+    width: 100%;
+    padding:4%
 }
 .poptitle
 {
     display: flex ;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 1em;
+    padding-bottom: 2.4%;
+    padding-top: 0%;
     font-size: 1em;
 }
 .fas.fa-chart-line
 {
     font-size: 20px;
 }
-.pophotelspic1
+.pophotelspic
 {
-    width: 15em;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    width: 97%;
+    height: 10em;
     border: solid 0.4em white;
-    box-shadow: 0em 0em 0.4em lightgray;
     border-radius: 2em;
-    height: 100%;
+    z-index:1;
 }
-.pophotelsdesc1
+.pophotelname
+{
+    margin-top: 0.8em;
+    margin-bottom: 0em;
+}
+.pophotelsdesc
 {
     background-color:white;
     margin-left: -3.5em;
-    padding-left: 1.8em;
-    padding-right: 1em;
+    padding-left: 1.5em;
+    padding-right: 3.5em;
     width: 20em;
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
-    box-shadow: 0em 0em 0.4em lightgray;
-}
-.pophotelspic2
-{
-    width: 14em;
-    border: solid 0.4em white;
-    box-shadow: 0em 0em 0.4em lightgray;
-    border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em;
-    height: 100%;
-}
-.pophotelsdesc2
-{
-    background-color:white;
-    margin-left: -2.5em;
-    padding-left: 1.8em;
-    padding-right: 1em;
-    width: 20em;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
-    box-shadow: 0em 0em 0.4em lightgray;
-}
-.pophotelspic3
-{
-    width: 7em;
-    border: solid 0.4em white;
-    box-shadow: 0em 0em 0.4em lightgray;
-    border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em;
-    height: 100%;
-    padding-top: -5em;
-}
-.pophotelsdesc3
-{
-    
-    background-color:white;
-    margin-left: -0.4em;
-    padding-left: 1.8em;
-    padding-right: 1em;
-    width: 20em;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
-    box-shadow: 0em 0em 0.4em lightgray;
+    z-index:2;
 }
 .pophotelspicsanddesc
 {
     display:flex;
-    justify-content: center;
+    box-shadow: 0em 0em 0.4em lightgray;
+    border-radius: 2em;
 }
 
 /*Bloc activités*/
+section[id="section2"]
+{
+    width:100%;
+    padding:4%
+}
+
+.actipicsanddesc
+{
+    box-shadow: 0em 0em 0.4em lightgray;
+    border-radius: 2em;
+    width: 92%;
+    
+}
 .activitiespics
 {
-    width: 10%;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 10em;
+    border-radius: 2em 2em 0em 0em;
+    z-index:1;
 }
+.activitiestitle
+{
+    width: 100%;
+    padding-bottom: 1.5em;
+    padding-left: 1.7em;
+    font-weight: bold;
+}
+
 
 
 
@@ -203,17 +199,15 @@ aside
         margin-right: 2em;
         border-radius: 1em;
         padding:2%;
-        
     }
 
     .hotelspics
     {
-        width: 22em
-        
+        width: 20em
     }
     .hotelsdesc
     {
-        width: 20.8em;
+        width: 18.8em;
     }
     .allhotels
     {
@@ -234,7 +228,7 @@ aside
     {
         text-align: justify;
         width: 25%;
-        padding: 2em;
+        padding: 2%;
         border-radius: 1em;
     }
 }

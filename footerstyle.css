@@ -1,13 +1,6 @@
-@font-face
-{
-    font-family: "Raleway" ; src: url("polices/static/Raleway-Medium.ttf");
-}
-
 footer
 {
-    width: 90%;
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
-    font-size: 0.7em ;
+    width: 100%;
     display: flex;
     justify-content: flex-start; /*éléments mis côte à côte*/
     background-color: #F2f2f2

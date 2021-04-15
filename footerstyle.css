@@ -5,12 +5,12 @@
 
 footer
 {
+    width: 90%;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 0.7em ;
     display: flex;
     justify-content: flex-start; /*éléments mis côte à côte*/
     background-color: #F2f2f2
-
 }
 
 
@@ -24,4 +24,14 @@ ul[class=footermenu]
 {
     margin: 2em;
     margin-right: 5em;
+}
+
+/*responsive design pour smartphone*/
+@media screen and (max-device-width:480px) 
+{
+    footer
+    {
+        display:flex;
+        flex-direction: column ;
+    }
 }

@@ -39,8 +39,8 @@ article
 
 .hotelspics
 {
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     width: 97%;
     height: 100%;
     border: solid 0.4em white;
@@ -118,13 +118,14 @@ aside
     width: 14em;
     border: solid 0.4em white;
     box-shadow: 0em 0em 0.4em lightgray;
-    border-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
     height: 100%;
 }
 .pophotelsdesc2
 {
     background-color:white;
-    margin-left: -2.6em;
+    margin-left: -2.5em;
     padding-left: 1.8em;
     padding-right: 1em;
     width: 20em;
@@ -134,17 +135,19 @@ aside
 }
 .pophotelspic3
 {
-    width: 15em;
+    width: 7em;
     border: solid 0.4em white;
     box-shadow: 0em 0em 0.4em lightgray;
-    border-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
     height: 100%;
     padding-top: -5em;
 }
 .pophotelsdesc3
 {
+    
     background-color:white;
-    margin-left: -3.5em;
+    margin-left: -0.4em;
     padding-left: 1.8em;
     padding-right: 1em;
     width: 20em;

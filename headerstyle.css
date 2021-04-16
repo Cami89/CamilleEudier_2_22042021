@@ -7,8 +7,21 @@ body
 {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 0.9em ;
-    margin:0%
+    margin:0%;
+    padding: 0em;
+    max-width: 100%;
+    
 }
+
+header
+{
+    max-width: 100%;
+    padding:0%;
+    margin:0%;
+
+}
+
+
 
 #logo
 {
@@ -52,14 +65,15 @@ li[class=navmenu]:hover /*dynamique au clic*/
 
 .lowheader
 {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-top: 5%;
 
 }
 
 h1
 {
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 
 
@@ -67,11 +81,12 @@ h1
 
 .searchbar
 {
+    margin-top: 10%;
     display:flex;
     justify-content: flex-start;
     align-items:center;
     font-size: 1em;
-    width: 100%;
+    min-width: 100%;
     height: 3.1em;
     overflow:hidden;
     border-radius: 0.7em;
@@ -91,6 +106,7 @@ h1
     padding: 1em;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-weight: bold;
+    width: 70%;
 }
 .searchbutton
 {
@@ -124,10 +140,6 @@ h1
 {
     font-weight: bold;
     margin-right: 1.5em;
-}
-.filtersbutton
-{
-    margin-top: 0em;
 }
 .ecofilter, .famfilter, .anifilter, .romfilter
 {

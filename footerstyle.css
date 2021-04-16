@@ -1,22 +1,30 @@
 footer
 {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: flex-start; /*éléments mis côte à côte*/
-    background-color: #F2f2f2
+    background-color: #F2f2f2;
+    padding-bottom: 3em;
+    padding-left: 1em;
 }
 
+.footermenucolumn
+{
+    margin: 1em;
+    margin-right: 5em;
+}
 
 ul[class=footermenu]
 {
     list-style: none;
     padding-left: 0em;
+    margin-bottom: -1em;
+
 }
 
-.footermenucolumn
+li[class=footermenu]
 {
-    margin: 2em;
-    margin-right: 5em;
+    margin-bottom:0.7em;
 }
 
 /*responsive design pour smartphone*/

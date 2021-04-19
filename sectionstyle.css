@@ -63,9 +63,10 @@ h4[class="hotelname"]
 {
     background-color:white;
     margin-top: -2.5em;
+    margin-left: -0.1em;
     padding-left: 1.2em;
     padding-bottom: 0.8em;
-    width: 96.5%;
+    width: 96%;
     border-bottom-left-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
     z-index: 2;
@@ -166,7 +167,6 @@ section[id="section2"]
 }
 .activitiestitle
 {
-
     padding-bottom: 1.5em;
     padding-left: 1.5em;
     font-weight: bold;
@@ -202,36 +202,36 @@ section[id="section2"]
 /*Responsive desktop*/
 @media screen and (min-device-width:768px) 
 {   
+
     article
     {
-        width: 62%;
+        width: 65%;
         background-color: #f2f2f2;
         margin-right: 2em;
         border-radius: 1em;
         padding:2%;
     }
 
+    .hotelspicsanddesc
+    {
+        max-width: 19em;
+        background-color: white;
+        margin-bottom: 2em;
+    }
     .hotelspics
     {
-        width: 20em
+        max-width: 19em;
     }
     .hotelsdesc
     {
-        width: 18.8em;
+        max-width: 18em;
     }
     .allhotels
     {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: space-between;
-        
-    }
-
-    .hotelspicsanddesc
-    {
-        margin: 0em 0em 2em 0em;
-        width: 20em;
+        justify-content: space-around;
+        align-items: space-around;
     }
 
     aside
@@ -240,5 +240,11 @@ section[id="section2"]
         width: 25%;
         padding: 2%;
         border-radius: 1em;
+    }
+
+    .pophotelspicsanddesc
+    {
+        height: 10em ;
+        margin-bottom: 1em;
     }
 }

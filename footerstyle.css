@@ -3,6 +3,7 @@ footer
     max-width: 100%;
     display: flex;
     justify-content: flex-start; /*éléments mis côte à côte*/
+    flex-direction: column ;
     background-color: #F2f2f2;
     padding-bottom: 3em;
     padding-left: 1em;
@@ -30,9 +31,21 @@ li[class=footermenu]
 /*responsive design pour smartphone*/
 @media screen and (max-device-width:480px) 
 {
+
+
+}
+/*Responsive desktop*/
+@media screen and (min-device-width:1150px) 
+{
     footer
     {
-        display:flex;
-        flex-direction: column ;
+        display: flex;
+        flex-direction: row;
+        padding: 2%;
+    }
+    .footermenucolumn
+    {
+        margin-right: 15em;
+        margin-top: 0em;
     }
 }

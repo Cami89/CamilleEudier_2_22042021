@@ -22,7 +22,6 @@ header
 }
 
 
-
 #logo
 {
     width: 7em ;
@@ -62,13 +61,21 @@ li[class=navmenu]:hover /*dynamique au clic*/
     padding: 1em ; /*marge intérieure*/
     border-bottom: 0.2em #0065FC solid;
 }
+a
+{
+    text-decoration:none; 
+    color:black;
+}
+a:hover
+{
+    color: #0065FC;
+}
 
-.lowheader
+.lowheader /*Bloc après nav et avant sections*/
 {
     padding-left: 6%;
     padding-right: 6%;
     margin-top: 5%;
-
 }
 
 h1
@@ -253,24 +260,30 @@ h1
 /*Responsive desktop*/
 @media screen and (min-device-width:1150px) 
 {
-    body 
-    {
-        margin:2%
-    }
 
+    body
+    {
+        max-width: 100%;
+        padding: 2%;
+        margin:0%
+    }
+    
     #logo
     {
         width: 6em;
         margin-left: 0%;
         margin-top: -0.8em;
     }
+
     #login
     {
-        position:absolute;
-        right: 6em;
-        margin-left: 5em;
-        top:0em;
+        position:relative;
+        margin-top:1em;
+        padding-left: 5em;
+        margin-right: 0em;
+        text-align: end;
     }
+
     .topheader
     {
         display:flex;
@@ -306,13 +319,7 @@ h1
         text-align: center;
         width: 50%;
     }
-    #login
-    {
-        position:relative;
-        margin-top:3em;
-        padding-left: 3em;
-        margin-right: 0em;
-    }
+
 
     .lowheader
     {
@@ -327,7 +334,7 @@ h1
 
     #cityfinder
     {
-        max-width: 15em;
+        max-width: 14em;
     }
 
     .smartsearchbutton
@@ -339,5 +346,6 @@ h1
     {
         display: inline-block;
     }
+
 
 }

@@ -28,14 +28,33 @@ li[class=footermenu]
     margin-bottom:0.7em;
 }
 
-/*responsive design pour smartphone*/
-@media screen and (max-device-width:480px) 
+/*responsive smartphone*/
+@media screen and (max-device-width:600px) 
 {
 
 
 }
+
+/*responsive tablette*/
+@media only screen and (min-device-width:600px) and (max-device-width:1024px)
+{
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        padding: 4%;
+        
+    }
+    .footermenucolumn
+    {
+        width: 25%;
+        margin-right: 5em;
+        margin-top: 0em;
+    }
+
+}
 /*Responsive desktop*/
-@media screen and (min-device-width:1150px) 
+@media screen and (min-device-width:1024px) 
 {
     footer
     {

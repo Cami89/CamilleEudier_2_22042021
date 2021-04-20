@@ -217,7 +217,7 @@ h1
 
 
 /*responsive design pour smartphone*/
-@media screen and (max-device-width:480px) 
+@media screen and (max-device-width:600px) 
 {
     .searchbutton
     {
@@ -232,11 +232,13 @@ h1
 }
 
 /*Responsive design pour tablettes*/
-@media screen and (min-device-width:480px) 
+@media only screen and (min-device-width:600px) and (max-device-width:1024px)
 {   
     .lowheader
     {
         padding:5%;
+        margin-top: -1.5em;
+        margin-bottom: -1.5em;
     }
     .smartsearchbutton
     {
@@ -244,11 +246,16 @@ h1
     }
     .searchbar
     {   
-    height: 3.07em;
+        margin-top: 2em;
+        height: 3.07em;
     }
     .fas.fa-map-marker-alt
     {
         font-size: 1em ;
+    }
+    #cityfinder
+    {
+        width: 15em;
     }
     .filterstitle
     { 
@@ -258,7 +265,7 @@ h1
 }
 
 /*Responsive desktop*/
-@media screen and (min-device-width:1150px) 
+@media screen and (min-device-width:1024px) 
 {
 
     body
@@ -267,7 +274,7 @@ h1
         padding: 2%;
         margin:0%
     }
-    
+
     #logo
     {
         width: 6em;

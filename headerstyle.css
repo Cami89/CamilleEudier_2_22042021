@@ -13,6 +13,7 @@ body
     
 }
 
+
 header
 {
     max-width: 100%;
@@ -86,7 +87,7 @@ h1
 
 /*barre de recherche*/
 
-.searchbar
+.formsearchbar
 {
     margin-top: 10%;
     display:flex;
@@ -98,7 +99,7 @@ h1
     overflow:hidden;
     border-radius: 0.7em;
 }
-.fas.fa-map-marker-alt
+.fas.fa-map-marker-alt /*icone map*/
 {
     padding: 1em;
     background-color: #f2f2f2;
@@ -107,7 +108,7 @@ h1
     border-bottom-left-radius: 0.7em;
     
 }
-#cityfinder
+#cityfinder /*champs de recherche ville*/
 {
     border: #f2f2f2 solid 0.01em;
     padding: 1em;
@@ -115,7 +116,7 @@ h1
     font-weight: bold;
     width: 70%;
 }
-.searchbutton
+.searchbutton /*boutton de recherche manuscrit*/
 {
     padding: 1em;
     background-color: #0065FC;
@@ -124,7 +125,7 @@ h1
     border-top-right-radius: 0.7em;
     border-bottom-right-radius: 0.7em;
 }
-.smartsearchbutton
+.smartsearchbutton /*boutton de recherche icone*/
 {
     font-family: FontAwesome;
     border-radius: 0.7em;
@@ -136,19 +137,21 @@ h1
 }
 
 
-/*Filtres*/
-#filters
+/*Bloc Filtres*/
+#filters /*bloc entier*/
 {
     display:flex;
     flex-direction: row;
     justify-content: flex-start;
 }
-.filterstitle
+.filterstitle /*titre pricipal*/
 {
+    display:block;
+    margin-bottom: 1em; 
     font-weight: bold;
     margin-right: 1.5em;
 }
-.ecofilter, .famfilter, .anifilter, .romfilter
+.ecofilter, .famfilter, .anifilter, .romfilter /*icones + noms des filtres*/
 {
     display:inline-block;
     flex-wrap: nowrap;
@@ -156,7 +159,7 @@ h1
     margin-right:0.5em;
 }
 
-.fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog
+.fas.fa-money-bill-wave, .fas.fa-child, .fas.fa-heart, .fas.fa-dog /*icones*/
 {
     color: #0065FC;
     background-color:#DEEBFF; 
@@ -166,18 +169,18 @@ h1
     position:relative;
     z-index: 2;
 }
-.fas.fa-money-bill-wave
+.fas.fa-money-bill-wave /*icone de taille différente*/
 {
     padding-left: 0.84em;
     padding-right: 0.84em;
     padding-bottom:0.97em;
 }
-.fas.fa-child
+.fas.fa-child /*icone de taille différente*/
 {
     padding-left: 1.17em;
     padding-right: 1.17em;
 }
-.filtersname
+.filtersname /*noms des filtres*/
 {
     border-top: #f2f2f2 solid 0.2em;
     border-right: #f2f2f2 solid 0.2em;
@@ -185,32 +188,26 @@ h1
     padding: 0.72em 1em 0.72em 2em;
     border-radius: 0em 2em 2em 0em;
     font-weight: bold;
-    border-width: 0.2em;
     position:relative;
     z-index: 1;
 }
 
 
-
 /*phrase info sur le nombre d'hébergements*/
-.nombrehebergement
+.nombrehebergement /*phrase*/
 {
     display:flex;
     justify-content: flex-start;
     align-items: center;
 }
-.fas.fa-info
+.fas.fa-info /*icone info*/
 {
     color:#0065FC;
     border-radius: 10em;
     border-color:#f2f2f2;
     background-color: white;
-    border-style:solid;
-    border-width: 0.1em;
-    padding-top:0.4em ;
-    padding-left: 0.7em;
-    padding-bottom:0.4em ;
-    padding-right: 0.7em;
+    border:solid #f2f2f2 0.1em;
+    padding:0.4em 0.7em 0.4em 0.7em;
     margin-right: 0.7em;
 }
 
@@ -219,14 +216,9 @@ h1
 /*responsive design pour smartphone*/
 @media screen and (max-device-width:600px) 
 {
-    .searchbutton
+    .searchbutton /*boutton de recherche manuscrit*/
     {
         display: none;
-    }
-    .filterstitle
-    { 
-        display:block;
-        margin-bottom: 1em; 
     }
 
 }
@@ -234,34 +226,30 @@ h1
 /*Responsive design pour tablettes*/
 @media only screen and (min-device-width:600px) and (max-device-width:1024px)
 {   
-    .lowheader
+    .lowheader /*bloc après nav et avant sections*/
     {
         padding:5%;
         margin-top: -1.5em;
         margin-bottom: -1.5em;
     }
-    .smartsearchbutton
+    .smartsearchbutton /*boutton de recherche icone*/
     {
         display: none;
     }
-    .searchbar
+    .formsearchbar 
     {   
-        margin-top: 2em;
-        height: 3.07em;
+        margin-top: -2em;
+
     }
-    .fas.fa-map-marker-alt
+    .fas.fa-map-marker-alt /*icone pointer*/
     {
         font-size: 1em ;
     }
-    #cityfinder
+    #cityfinder /*champs de recherche ville*/
     {
         width: 15em;
     }
-    .filterstitle
-    { 
-        display:block;
-        margin-bottom: 1em; 
-    }
+
 }
 
 /*Responsive desktop*/
@@ -270,9 +258,7 @@ h1
 
     body
     {
-        max-width: 100%;
         padding: 2%;
-        margin:0%
     }
 
     #logo
@@ -291,14 +277,14 @@ h1
         text-align: end;
     }
 
-    .topheader
+    .topheader /*bloc avant h1 (logo login nav)*/
     {
         display:flex;
         justify-content: space-between;
         align-items:center;
         vertical-align: middle;
     }
-    .navandlogin
+    .navandlogin 
     {
         display:flex
     }
@@ -306,50 +292,44 @@ h1
     {
         display:inline-block;
         border-bottom: none;
-        padding-top: 2em;
-        padding-right: 2em;
-        padding-bottom: 2em;
-        padding-left: 2em;
+        padding: 2em;
         text-align:center;
         width: 50%;
     }
-    li[class=navmenu]:hover
+    li[class=navmenu]:hover /*dynamique au clic*/
     {
         display:inline-block;
         border-top: 0.2em #0065FC solid;
         border-bottom: none;
-        padding-top: 2em;
-        padding-right: 2em;
-        padding-bottom: 2em;
-        padding-left: 2em;
+        padding: 2em;
         color: #0065FC;
         text-align: center;
         width: 50%;
     }
 
 
-    .lowheader
+    .lowheader /*bloc après nav et avant autres sections*/
     {
         padding:0%;
         margin-top: -0.5em;
     }
 
-    .formsearchbar
+    .formsearchbar /*barre de recherche entière*/
     {
-        margin-top:-8.5em;
+        margin-top:1em;
     }
 
-    #cityfinder
+    #cityfinder /*champs de recherche villes*/
     {
         max-width: 14em;
     }
 
-    .smartsearchbutton
+    .smartsearchbutton /*boutton de recherche icone*/
     {
         display: none;
     }
 
-    .filterstitle
+    .filterstitle /*Titre principal Filtres*/
     {
         display: inline-block;
     }

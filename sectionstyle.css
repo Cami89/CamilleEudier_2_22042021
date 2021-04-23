@@ -21,10 +21,12 @@ section[id="section1"]
 }
 
 /*Bloc hébergements*/
-article
+
+.allhotelsandtitle
 {
-    padding:5%;
+    padding:5%
 }
+
 .hoteltitle /*Titre principal*/
 {
     padding-bottom: 1%;
@@ -63,7 +65,7 @@ h4[class="hotelname"] /*Noms*/
 .hotelsdesc /*Description (nom + prix + étoiles)*/
 {
     margin: -0.1em;
-    padding: 0.2em 1.2em 0.8em 1.2em ;
+    padding: 0.2em 0.2em 0.8em 1.2em ;
     width: 100%;
     border-bottom-left-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
@@ -124,7 +126,6 @@ aside
     object-fit: cover;
     overflow: hidden;
     width: 100%;
-    height: 11em;
     z-index:1;
 }
 
@@ -132,9 +133,9 @@ aside
 {
     background-color:white;
     margin:-0.1em -0.1em -0.1em -3.5em;
-    padding: 0em 1em 1.5em 1.5em;
+    padding: 0em 1.7em 1.5em 1.5em;
     width: 18em;
-    height:100%;
+
     z-index:2;
 }
 
@@ -152,8 +153,7 @@ aside
 
 .stars.pop /*étoiles*/
 {
-    position:relative;
-    bottom:-1.6em
+    margin-top: 1.5em;
 }
 
 
@@ -190,7 +190,7 @@ section[id="section2"]
 
 
 /*responsive smartphone*/
-@media screen and (max-device-width:600px) 
+@media screen and (max-width:600px) 
 {
     /*Bloc populaire mis au dessus du bloc hébergement*/
     section[id="section1"]
@@ -201,7 +201,7 @@ section[id="section2"]
     {
         order:1;
     }
-    article
+    .allhotelsandtitle
     {
         order:2;
     }
@@ -209,24 +209,32 @@ section[id="section2"]
 }
 
 /*Responsive tablettes*/
-@media only screen and (min-device-width:600px) and (max-device-width:1024px) 
+@media only screen and (min-width:600px) and (max-width:1024px) 
 {
     
     section[id="section1"]
     {
         flex-wrap: wrap;
     }
-    
-    article /* bloc hébergement */
+
+    .allhotelsandtitle /* bloc titre principal, hébergement et afficher + */
     {
         order:2; 
-    }
-
-    .allhotels
-    {
         display:flex;
         flex-wrap:wrap;
         justify-content: space-between;
+    }
+    .allhotels /*bloc hébergements*/
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: -1em;
+    }
+    h2[class="hoteltitle"] /*titre principal */
+    {
+    display: block;
+    width: 100%;
     }
     .hotelspicsanddesc
     {
@@ -251,20 +259,28 @@ section[id="section2"]
         display:flex;
         flex-direction: column;
     }
-    .pophotelsdesc /*description*/
-    {
-        width: 85%;
-        height: 60%;
-        padding: 1em;
-        text-align: center;
-        margin: 0em
-    }
     .pophotelspic /*photos*/
     {
         width: 100%;
         height: 40%;
     }
-    
+    .pophotelsdesc /*descriptif*/
+    {
+        width: 85%;
+        height: 60%;
+        padding: 1em;
+        margin: 0em;
+        display:flex;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .morehotels
+    {
+        display: block;
+        width: 100%;
+        padding-top: 1em;
+    }
 
     /*Bloc activités*/
     .allactivities
@@ -337,41 +353,58 @@ section[id="section2"]
 }
 
 /*Responsive desktop*/
-@media screen and (min-device-width:1024px) 
+@media screen and (min-width:1024px) 
 {   
-
-    article
+    
+    .allhotelsandtitle /*bloc titre principal, hébergements et afficher +*/
     {
-        width: 65%;
-        background-color: #f2f2f2;
-        margin-right: 2em;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2%;
         border-radius: 1em;
-        padding:2%;
+        margin-right: 2em;
+        background-color: #f2f2f2;
+        width: 70%;
     }
-
-    .hotelspicsanddesc
+    h2[class="hoteltitle"] /*titre principal*/
     {
-        max-width: 29%;
+        display: block;
+        width: 100%;
+    }
+    .allhotels /*bloc hébergements*/
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: -1em;
+    }
+    .hotelspicsanddesc /*photo + descriptif*/
+    {
+        max-width: 30%;
         background-color: white;
         margin-bottom: 2em;
     }
     .hotelspics
     {
         max-width: 100%;
+        
     }
     .hotelsdesc
     {
-        max-width: 100%;
-    }
-    .allhotels
-    {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: space-around;
+        max-width: 90%;
+        height: 35%;
     }
 
-    aside
+
+    .morehotels
+    {
+        display: block;
+        width: 100%;
+        padding-top: 1em;
+    }
+
+    aside /*bloc hôtel populaire*/
     {
         text-align: justify;
         width: 25%;
@@ -382,6 +415,18 @@ section[id="section2"]
     {
         height: 10em ;
         margin-bottom: 1em;
+    }
+    .pophotelsdesc
+    {
+        margin-top: 0em;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .stars.pop
+    {
+        margin-top: 0em;
+        margin-bottom: -0.5em;
     }
     
 

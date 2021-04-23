@@ -29,14 +29,14 @@ li[class=footermenu]
 }
 
 /*responsive smartphone*/
-@media screen and (max-device-width:600px) 
+@media screen and (max-width:600px) 
 {
 
 
 }
 
 /*responsive tablette*/
-@media only screen and (min-device-width:600px) and (max-device-width:1024px)
+@media only screen and (min-width:600px) and (max-width:1024px)
 {
     footer
     {
@@ -54,7 +54,7 @@ li[class=footermenu]
 
 }
 /*Responsive desktop*/
-@media screen and (min-device-width:1024px) 
+@media screen and (min-width:1024px) 
 {
     footer
     {

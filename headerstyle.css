@@ -7,9 +7,9 @@ body
 {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     font-size: 0.9em ;
-    margin:0%;
+    margin:auto;
     padding: 0em;
-    max-width: 100%;
+    max-width: 1440px;
     
 }
 
@@ -214,7 +214,7 @@ h1
 
 
 /*responsive design pour smartphone*/
-@media screen and (max-device-width:600px) 
+@media screen and (max-width:600px) 
 {
     .searchbutton /*boutton de recherche manuscrit*/
     {
@@ -224,7 +224,7 @@ h1
 }
 
 /*Responsive design pour tablettes*/
-@media only screen and (min-device-width:600px) and (max-device-width:1024px)
+@media only screen and (min-width:600px) and (max-width:1024px)
 {   
     .lowheader /*bloc après nav et avant sections*/
     {
@@ -238,7 +238,7 @@ h1
     }
     .formsearchbar 
     {   
-        margin-top: -2em;
+        margin-top: 1.5em;
 
     }
     .fas.fa-map-marker-alt /*icone pointer*/
@@ -253,7 +253,7 @@ h1
 }
 
 /*Responsive desktop*/
-@media screen and (min-device-width:1024px) 
+@media screen and (min-width:1024px) 
 {
 
     body

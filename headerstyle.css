@@ -103,7 +103,7 @@ h1
 {
     padding: 1em;
     background-color: #f2f2f2;
-    border:#f2f2f2 solid 0.01em;
+    border: transparent solid 0.01em;
     border-top-left-radius: 0.7em;
     border-bottom-left-radius: 0.7em;
     
@@ -116,11 +116,15 @@ h1
     font-weight: bold;
     width: 70%;
 }
+::placeholder
+{
+    color:black;
+}
 .searchbutton /*boutton de recherche manuscrit*/
 {
     padding: 1em;
     background-color: #0065FC;
-    border:#0065FC solid 0.01em;
+    border:transparent solid 0.01em;
     color: white;
     border-top-right-radius: 0.7em;
     border-bottom-right-radius: 0.7em;
@@ -131,7 +135,7 @@ h1
     border-radius: 0.7em;
     padding: 1em;
     background-color: #0065FC;
-    border:#0065FC solid 0.01em;
+    border:transparent solid 0.01em;
     color: white;
     margin-left: -1em;
 }

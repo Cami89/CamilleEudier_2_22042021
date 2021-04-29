@@ -177,14 +177,14 @@ h1
 {
     padding-left: 0.84em;
     padding-right: 0.84em;
-    padding-bottom:0.97em;
+    padding-bottom:1em;
 }
 .fas.fa-child /*icone de taille différente*/
 {
     padding-left: 1.17em;
     padding-right: 1.17em;
 }
-.filtersname /*noms des filtres*/
+.filtersname/*noms des filtres*/
 {
     border-top: #f2f2f2 solid 0.2em;
     border-right: #f2f2f2 solid 0.2em;
@@ -194,6 +194,11 @@ h1
     font-weight: bold;
     position:relative;
     z-index: 1;
+}
+.filtersname:hover/*noms des filtres*/
+{
+    color:#0065FC;
+    border-color:#DEEBFF;
 }
 
 

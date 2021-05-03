@@ -484,8 +484,6 @@ section[id="section2"]
         height: 30em;
         display:flex;
         justify-content: space-between;
-        align-content: space-between;
-        flex-direction: row;
         flex-wrap: wrap;
     }
 
